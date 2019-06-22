@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All Events</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Nanum+Myeongjo|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <style>
+  	body{
+  		background-color:#eeeeee ;
+
+  	}
+  	.nav a{
+  		font-size: 20px;
+  	}
+    
+    .about{
+    	font-family: "Nanum Myeongjo", sans-serif;
+    	font-size: 20px;
+
+    }
+    
+    .main_container{
+    	margin-left: 10%;
+    	margin-right: 10%;
+    	background-color: white;
+    }
+    p{
+    	margin-left: 8px;
+    	margin-right: 5px;
+    }
+    .row{
+      font-size:15px;
+    }
+  </style>
+
+  <body>
+    <!-- left nav bar -->
+    
+<div class="main_container">
+
+
+<!--navbar start-->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black">
+	<div class="nav">
+  
+  <a class="navbar-brand" href="http://localhost:3000/admin_events">Events</a>
+  <a class="navbar-brand" href="http://localhost:3000/add_events">Add</a>
+  <a class="navbar-brand" href="http://localhost:3000/Logout">Logout</a>
+</div>
+</nav>
+
+<div class="row">
+        <div class="col-1"></div>
+        <div class=" col-10">
+       
+        <table class="table table-borderless"  style="margin-top:30px;">
+             
+            <tr>
+                <th>event title </th>
+                <th>event location </th>
+                <th>event start date </th>
+                <th>event end date </th>
+                <th>event folder </th>
+                
+            </tr>
+           <% event.forEach((event)=>{ %>
+            <tr>
+                
+                <td><%=event.title%></td>
+                <td><%=event.location%></td>
+                <td><%=event.start_date%></td>
+                <td><%=event.end_date%></td>
+                <td><%=event.folder_name%></a></td>
+                
+            </tr>
+            <% }); %>
+        </table>
+          
+            
+            
+</div>
+
+</div>

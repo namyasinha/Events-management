@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Nanum+Myeongjo|Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <style>
+  	body{
+  		background-color:#eeeeee ;
+
+  	}
+  	.nav a{
+  		font-size: 20px;
+  	}
+    
+    
+    
+    .main_container{
+    	margin-left: 25%;
+    	margin-right: 25%;
+    	background-color: green;
+    	height:750px;
+    }
+    .sub-container{
+         background-color:white;
+         margin-left: 30%;
+         margin-right: 40%;
+
+         margin-top: 20%;
+         width:40%;
+         height: 50%;
+    }
+    .form-group{
+    	margin-left: 20px;
+    	margin-right: 20px;
+    	
+    	font-size: 20px;
+    }
+    </style>
+
+  <body>
+    <!-- left nav bar -->
+    
+<div class="main_container">
+	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:black">
+	<div class="nav">
+  <a class="navbar-brand" href="http://localhost:3000">HOME</a>
+  
+</div>
+</nav>
+<!--form -->
+<div class="sub-container">
+<form action="/login"method="post">
+
+	
+<br><br><br>
+	<div class="form-group">
+             <h2><font color="red"><%=message%></font></h2>
+              <p>E-MAIL</p>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="EMail"
+                required
+              />
+             
+            </div>
+
+            <div class="form-group">
+              <P>KEY</P>
+              <input
+                type="password"
+                class="form-control"
+                id="key"
+                name="key"
+                placeholder="Key"
+                required
+              />
+             <br>
+            </div>
+            <center><button style="font-size: 20px;width: 80%" class="btn btn-success">Login</button></center>
+
+
+</form>
+<br>
+<center><a style="font-size: 20px;" href="http://localhost:3000/register"><u>register</u></a></center>
+<center><a style="font-size: 20px;" href="http://localhost:3000/forgot"><u>Forgot Password?</u></a></center>
+
+</div>
+</div>
+</body>
+</html>
+
