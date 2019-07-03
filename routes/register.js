@@ -32,7 +32,7 @@ db.query(sql,(err,results)=>{
                 	service:'gmail',
                 	auth:{
                       user:'namyasinha2@gmail.com',
-                      pass:'#12345@alpi'
+                      pass:'***'
                     }
                 })
                 var key=Math.floor(Math.random()*10000000)
